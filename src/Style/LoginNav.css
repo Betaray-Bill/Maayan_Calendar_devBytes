@@ -4,9 +4,12 @@
     margin-top: 0;
     position: absolute;
     height: 60px;
+    display: flex;
+    justify-content: space-between;
     /* background-color: #fff; */
     box-shadow: 0 19px 38px rgb(0 0 0 / 10%);
     align-items: center;
+    /* background-color: white; */
     z-index: 10;
 }
 
@@ -14,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 0 25px 0 25px;
 }
 
@@ -43,19 +47,19 @@
     padding: 0px 20px;
 }
 
-.about {
+.about_nav {
     padding: 0px 20px;
 }
 
-.about a,
-.admin_btn a {
+.about_nav a,
+.admin_btn_nav a {
     text-decoration: 18px;
     color: white;
     font-size: 18px;
     font-weight: 600;
 }
 
-.admin_btn a {
+.admin_btn_nav a {
     font-size: 18px;
     font-weight: 600;
     padding: 7px 17px;
@@ -67,10 +71,16 @@
     /* border: 2px solid #050c16; */
 }
 
-.admin_btn a:hover {
+.admin_btn_nav a:hover {
     background-color: #f9f9f9;
     color: #050c16;
     transition: 250ms all ease-in-out;
+}
+
+.about_nav {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
 }
 
 @media(max-width:768px) {
@@ -85,7 +95,7 @@
 
 @media(max-width:640px) {
     .about a,
-    .admin_btn a {
+    .admin_btn_nav a {
         text-decoration: none;
         color: white;
         font-size: 14px;
@@ -94,7 +104,7 @@
     .logo_name {
         font-size: 14px;
     }
-    .admin_btn a {
+    .admin_btn_nav a {
         padding: 5px 12px;
     }
 }

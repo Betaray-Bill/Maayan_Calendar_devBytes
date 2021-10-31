@@ -40,7 +40,7 @@ function Month_event({ all_det , id}) {
                 <h2>{month}-{all_det.Year}</h2>
             </div>
             <div className="event_posts">
-                <Post all_det={all_det} id={id}/>
+                <Post all_det={all_det} id={id}/>   
             </div>
         </div>
     )

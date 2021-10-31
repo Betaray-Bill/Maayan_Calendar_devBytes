@@ -12,15 +12,15 @@ function LoginNav() {
                         <img src={logo} alt="" />
                     </div>
                     <div className="logo_name">
-                        <h3>Maayan Calendar</h3>
+                        <h3>CodeClub Calendar</h3>
                     </div>
                 </div>
                 <div className="loginNav_right">
-                    <div className="about">
-                        {/* <a href="#about">About</a> */}
+                    <div className="about_nav">
                         <Link to="/about">About</Link>
+                        <Link to="/contact">Contact</Link>
                     </div>
-                    <div className="admin_btn">
+                    <div className="admin_btn_nav">
                         <a href="#admin_section">Admin</a>
                     </div>
                 </div>

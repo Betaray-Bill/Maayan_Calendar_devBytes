@@ -10,7 +10,6 @@ import { logout,login, selectUser } from './features/userSlice';
 
 function App() {
 
-
   const dispatch = useDispatch()
   const user = useSelector(selectUser)
 

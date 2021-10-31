@@ -3,7 +3,7 @@
     /* background-color: rgb(145, 191, 229); */
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     z-index: 10;
     /* overflow-y: hidden; */
     display: flex;

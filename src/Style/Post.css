@@ -6,6 +6,7 @@
     padding: 10px;
     background-color: white;
     cursor: pointer;
+    margin-top: 30px;
 }
 
 .post_wrapper {
@@ -101,6 +102,12 @@
 
 .del_icon {
     color: rgb(231, 41, 27);
+}
+
+@media(max-width:1280px) {
+    .post {
+        width: 20rem;
+    }
 }
 
 @media(max-width:768px) {

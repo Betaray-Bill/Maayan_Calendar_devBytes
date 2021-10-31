@@ -7,8 +7,10 @@ import "../Style/Post.css"
 function Post({ all_det , id}) {
 
     const del_doc = async() => { 
+        console.log("del");
         const docRef = doc(db,"events", id);
         await deleteDoc(docRef)
+        console.log("delsss");
     }
     
   return (
@@ -30,7 +32,7 @@ function Post({ all_det , id}) {
                         <a href={all_det.MeetLink}>Join Meet</a>
                     </div>
                     <div className="event_form">
-                        <a href={all_det.FormLink}>Fill Form</a>
+                        <a href={all_det.FormLink}>Register</a>
                     </div>
                 </div>
 

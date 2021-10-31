@@ -9,7 +9,6 @@ import {db, storage} from "../firebase"
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from "@firebase/firestore"
 import { ref, getDownloadURL, uploadString } from "@firebase/storage"
 
-
 function Modal() {
 
     const [open, setopen] = useRecoilState(modalstate)
@@ -56,7 +55,6 @@ function Modal() {
                 image: downloadedUrl
             })
         })
-
 
         setopen(false);
         setselectedfile(null);

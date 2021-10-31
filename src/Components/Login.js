@@ -22,7 +22,7 @@ function Login() {
                     </video>
             <div className="wrapper">
                 <div className="web_name">
-                    <h2>Maayan Calendar</h2>
+                    <h2>CodeClub Calendar</h2>
                 </div>
                 <div className="signIn_section">
                     <button 

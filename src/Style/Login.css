@@ -73,11 +73,11 @@ button img {
 .btn-signIn {
     font-size: 18px;
     font-weight: 600;
-    padding: 7px 17px;
+    padding: 12px 24px;
     border: none;
     background-color: #f9f9f9;
     color: #050c16;
-    border-radius: 3px;
+    border-radius: 8px;
     cursor: pointer;
     border: 2px solid #050c16;
     font-family: 'Roboto', sans-serif;
