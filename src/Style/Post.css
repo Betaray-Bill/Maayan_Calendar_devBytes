@@ -43,7 +43,8 @@
 }
 
 .event_info {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .event_head h2 {
@@ -53,7 +54,12 @@
 .event_info_links,
 .dateAndTime {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+.event_info_links {
+    padding-top: -20px;
 }
 
 .event_info_links a {
@@ -61,9 +67,9 @@
 }
 
 .event_gmeet a {
-    padding: 7px 17px !important;
+    padding: 7px 17px;
     background-color: rgb(125, 185, 241);
-    border-radius: 4px;
+    border-radius: 3px;
     color: black;
 }
 
@@ -74,13 +80,13 @@
 }
 
 .event_form a {
-    padding: 7px 17px !important;
+    padding: 7px 17px;
     color: black;
 }
 
 .event_form a:hover {
     transition: 250ms all ease-in-out;
-    padding: 7px 17px !important;
+    padding: 7px 17px;
     background-color: rgb(125, 185, 241);
     border-radius: 4px;
     color: black;
@@ -134,5 +140,6 @@
     .event_gmeet a {
         font-size: 5px 12px;
         font-size: 14px;
+        padding: 5px 10px;
     }
 }

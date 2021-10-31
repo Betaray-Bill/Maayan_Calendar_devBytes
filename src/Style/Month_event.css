@@ -1,8 +1,14 @@
 .month_event {
     margin: 20px;
+    margin-top: 40px;
 }
 
-.event_posts {
+.month_name {
+    color: white
+}
+
+
+/* .event_posts {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 2fr));
     grid-gap: 25px;
@@ -34,4 +40,4 @@
         grid-template-columns: repeat(1, minmax(0, 2fr));
         grid-gap: 25px;
     }
-}
+} */

@@ -61,7 +61,13 @@ a {
     justify-content: space-between;
     align-items: center;
     color: white;
+    width: 100px;
     text-decoration: none;
+}
+
+.nav_pages a:hover {
+    transition: 250ms all ease-in-out;
+    transform: scale(1.2)
 }
 
 @media(max-width:1200px) {
@@ -72,6 +78,7 @@ a {
     }
     .nav_pages a {
         padding-top: 20px;
+        width: 50px;
     }
     a p {
         display: none;

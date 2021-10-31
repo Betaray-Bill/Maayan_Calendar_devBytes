@@ -11,6 +11,7 @@ import {
 import HomeScreen from "./HomeScreen";
 import About from "./About";
 import Contact from "./Contact";
+import Project from "./Project";
 
   
 function Home() {
@@ -22,6 +23,9 @@ function Home() {
                 </Route>
                 <Route exact path="/about">
                     <About />
+                </Route>
+                <Route exact path="/project">
+                    <Project />
                 </Route>
                 <Route exact path="/contact">
                     <Contact />

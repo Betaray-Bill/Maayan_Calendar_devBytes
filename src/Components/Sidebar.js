@@ -3,7 +3,7 @@ import "../Style/Sidebar.css"
 import logo from "../logo.png"
 import { IoTimeOutline, IoCalendarNumberOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { HiOutlineHome, HiOutlinePhone,HiOutlineCollection } from "react-icons/hi";
+import { HiOutlineHome, HiOutlinePhone,HiOutlineCollection,HiChartBar } from "react-icons/hi";
 
 function Sidebar() {
   var today = new Date();
@@ -24,6 +24,10 @@ function Sidebar() {
         <Link to="/about">
           <HiOutlineCollection className="icon"/>
           <p>About</p>
+        </Link>
+        <Link to="/project">
+          <HiChartBar className="icon"/>
+          <p>Project</p>
         </Link>
         <Link  to="/contact">
           <HiOutlinePhone className="icon"/>

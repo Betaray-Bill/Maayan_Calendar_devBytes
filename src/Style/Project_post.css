@@ -1,0 +1,91 @@
+.Prj_post {
+    width: 30rem;
+    height: 25rem;
+    background-color: black;
+    border: 1px solid rgb(36, 36, 36);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgb(53, 53, 53);
+    cursor: pointer;
+    margin-top: 30px;
+    margin: 20px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-blend-mode: overlay;
+}
+
+.prj_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.prj_img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.prj_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.prj_name h2 {
+    color: white;
+}
+
+.prj_desc p {
+    color: white
+}
+
+.prj_dates,
+.prj_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prj_dates p {
+    color: white;
+    font-weight: 600;
+}
+
+.prj_links a {
+    padding: 7px 17px !important;
+    background-color: #1869d3;
+    border-radius: 4px;
+    width: max-content;
+}
+
+.prj_links a:hover {
+    transition: 250ms all ease-in-out;
+    color: black;
+    background-color: #5b99eb;
+}
+
+@media(max-width:1450px) {
+    .Prj_post {
+        width: 25rem;
+    }
+}
+
+@media(max-width:1024px) {
+    .Prj_post {
+        width: 23.45rem;
+    }
+}
+
+@media(max-width:768px) {
+    .Prj_post {
+        width: 26rem;
+    }
+}
