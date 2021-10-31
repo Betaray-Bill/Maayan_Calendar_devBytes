@@ -1,0 +1,120 @@
+.calendar_section {
+    width: 90vw;
+    min-height: 100vh;
+    margin-left: 10vw;
+    top: 0;
+    margin-top: 80px;
+    height: max-content;
+    padding-bottom: 5vh;
+    /* background-image: url('https://i.pinimg.com/originals/e0/c4/74/e0c4745ee07489804c3ac7bafec89d45.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 250ms ease-in-out;
+    background-attachment: fixed;
+}
+
+
+/* Events display */
+
+.Events_block {
+    width: 100%;
+    height: 100%;
+}
+
+.event_wrapper {
+    display: block;
+    /* background-color: palegreen */
+}
+
+
+/* add Section */
+
+.add_section {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    /* z-index: 10; */
+}
+
+.add_bt {
+    display: flex;
+    align-items: center;
+    padding: 7px 17px;
+    border-radius: 8px;
+    background-color: #1a73e8;
+    color: white;
+    cursor: pointer;
+}
+
+.add_bt button {
+    border: none !important;
+    outline: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+.add_bt:hover {
+    transition: 250ms all ease-in-out;
+    background-color: #1869d3;
+}
+
+.icon {
+    font-weight: 800;
+}
+
+.white {
+    color: white;
+}
+
+.add {
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 120;
+}
+
+.no_data {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.no_data_text p {
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 250ms ease-in-out;
+    animation-name: no_data_text_animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes no_data_text_animation {
+    0% {
+        color: rgb(66, 66, 68);
+    }
+    25% {
+        color: rgb(57, 58, 59);
+    }
+    50% {
+        color: rgb(34, 34, 34);
+    }
+    100% {
+        color: black;
+    }
+}
+
+@media(max-width:768px) {
+    .calendar_section {
+        width: 100vw;
+        margin-left: 0vw;
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,248 @@
+.Modal {
+    background-color: #caeeff;
+    /* background-color: rgb(145, 191, 229); */
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    /* overflow-y: hidden; */
+    display: flex;
+    justify-content: center;
+    transition: all 250ms ease-in-out;
+    overflow-x: hidden;
+    top: 0;
+}
+
+.modal_box {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+.icon-camera {
+    width: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.close-icon {
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    transition: all 250ms ease-in-out;
+    animation-name: icon_close_rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes icon_close_rotation {
+    0% {
+        transform: rotate(-45deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+.event_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event_name,
+.event_links {
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+}
+
+input[type="text"] {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: black;
+}
+
+label {
+    font-weight: 600;
+    padding-left: 6px
+}
+
+.modal_img_section {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: pink; */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.icon-camera {
+    font-size: 26px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.icon-camera:hover {
+    background-color: black;
+    transition: all 250ms ease-in-out;
+    color: white;
+}
+
+.upl_foto {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.upload_section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.upload_section button {
+    outline: none;
+    border: 1px solid black;
+    padding: 7px 17px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.upload_section button:hover {
+    transition: all 250ms ease-in-out;
+    background-color: white;
+    color: black;
+}
+
+.date_time {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="password"] {
+    background-color: white;
+    padding: 8px 18px;
+    margin: 20px 40px;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 20px 35px rgb(78, 78, 78);
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="date"]:hover,
+input[type="time"]:hover {
+    transition: all 250ms ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.selected_img_display {
+    /* width: 300px;
+    height: 200px; */
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.selected_img_display img {
+    object-fit: cover;
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    object-position: initial;
+}
+
+.uploading_img {
+    display: flex;
+    justify-content: center;
+}
+
+.uploading_img img {
+    position: relative;
+    width: 20vw;
+    /* height: 20vh */
+}
+
+@media(max-width:638px) {
+    .Modal {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    .uploading_img img {
+        width: 50vw;
+        height: 15vh
+    }
+    .event_name,
+    .event_links {
+        padding: 6px;
+        font-size: 14px;
+    }
+    .close-icon {
+        font-size: 24px
+    }
+    .date_time {
+        margin-top: 6px
+    }
+    input[type="date"],
+    input[type="time"] {
+        margin-top: 10px;
+        font-size: 14px;
+        margin: 10px 20px;
+    }
+}
