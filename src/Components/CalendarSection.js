@@ -1,16 +1,18 @@
 import React, {useState, useEffect} from "react";
 import "../Style/CalendarSection.css"
-import { useRecoilState } from 'recoil'
 import { IoAddOutline } from "react-icons/io5";
 import Modal from "./Modal";
 import { modalstate } from '../atoms/modalAtom'
 import Month_event from "./Month_event";
 import { collection, onSnapshot, orderBy, query } from '@firebase/firestore';
 import { db } from '../firebase';
-
+import { useRecoilState } from 'recoil'
+import { userstate } from '../atoms/userAtom'
 
 function CalendarSection() {
     
+    const [isAdmin, setisAdmin] = useRecoilState(userstate)
+
     const [open, setopen] = useRecoilState(modalstate)
     const [posts, setposts] = useState([]);
     const [loading, setloading] = useState(false)
@@ -72,16 +74,20 @@ function CalendarSection() {
             </div>
         
 
-            <div className="add_section">
-                <div className="add_bt" onClick={() => setopen(true)} >
-                    <IoAddOutline className="icon white"/> 
-                    <button 
-                        className="add"  
-                    >
-                        Create
-                    </button>
-                </div>
-            </div>
+            {
+                isAdmin ? (
+                    <div className="add_section">
+                        <div className="add_bt" onClick={() => setopen(true)} >
+                            <IoAddOutline className="icon white"/> 
+                            <button 
+                                className="add"  
+                            >
+                                Create
+                            </button>
+                        </div>
+                    </div>
+                ):("")
+            }
             <Modal />
         </div>
     )

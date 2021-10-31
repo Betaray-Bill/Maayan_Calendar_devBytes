@@ -5,7 +5,7 @@
     border: 1px solid rgb(36, 36, 36);
     border-radius: 8px;
     padding: 10px;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(33, 39, 46);
     cursor: pointer;
     margin-top: 30px;
     margin: 20px;
@@ -72,6 +72,17 @@
     background-color: #5b99eb;
 }
 
+.go_back {
+    margin: 20px;
+}
+
+.go_back_icon {
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
 @media(max-width:1450px) {
     .Prj_post {
         width: 25rem;
@@ -86,6 +97,6 @@
 
 @media(max-width:768px) {
     .Prj_post {
-        width: 26rem;
+        width: 21rem;
     }
 }

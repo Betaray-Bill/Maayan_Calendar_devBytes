@@ -13,6 +13,11 @@
     align-items: center;
 }
 
+.go_back_cnt {
+    position: absolute;
+    padding: 20px;
+}
+
 .contact-bg h3 {
     font-size: 1.3rem;
     font-weight: 400;

@@ -6,6 +6,8 @@ import { onAuthStateChanged } from '@firebase/auth';
 import Home from './Components/Home';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout,login, selectUser } from './features/userSlice';
+import { useRecoilState } from 'recoil';
+import { userstate } from './atoms/userAtom';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
   const dispatch = useDispatch()
   const user = useSelector(selectUser)
 
+  const [isAdmin, setisAdmin] = useRecoilState(userstate)
+  console.log("Is Admin in app : ", isAdmin)
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
        if (user) {
@@ -22,6 +26,7 @@ function App() {
           email:user.email,
           photo:user.photoURL
         }))
+        isAdmin(false)
       } else {
         dispatch(logout())
       }})
@@ -30,7 +35,7 @@ function App() {
   return (
       <div>
         {
-          user ? 
+          user || isAdmin ? 
           <Home /> : <HomeScreen  />
         }
       </div>

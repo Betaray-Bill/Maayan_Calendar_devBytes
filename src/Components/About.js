@@ -1,13 +1,19 @@
 import React from 'react'
 import "../Style/About.css"
-// import "../Style/Contact.css"
 import { FaFacebookF , FaTwitter, FaGithub} from "react-icons/fa";
-
+import { Link } from "react-router-dom";
+import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 
 function About() {
     return (
         <div className="about_section">
-                <div className="container_abt">
+
+        <div className="container_abt">
+        <div className="go_back_abt">
+          <Link to="/">
+                    <HiOutlineArrowNarrowLeft className="icon go_back_icon"/>
+                </Link>
+        </div>  
         <div className="banner">
         <section className="home">
           <h1>Sairam Code Club</h1>

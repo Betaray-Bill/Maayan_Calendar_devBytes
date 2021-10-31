@@ -45,6 +45,7 @@ function ProjectModal() {
             GitHubLink:GitHubLink.current.value,
             Startdateref:Startdateref.current.value,
             Enddateref:Enddateref.current.value,
+            image:"",
             timestamps: serverTimestamp()
         })
 
@@ -54,6 +55,7 @@ function ProjectModal() {
             await  updateDoc(doc(db, "projects", docRef.id), {
                 image: downloadedUrl
             })
+            console.log("downloadedUrl :: ", downloadedUrl)
         })
 
         setopen(false);

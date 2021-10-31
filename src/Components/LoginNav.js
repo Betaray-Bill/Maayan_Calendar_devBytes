@@ -20,7 +20,7 @@ function LoginNav() {
                         <Link to="/about">About</Link>
                         <Link to="/contact">Contact</Link>
                     </div>
-                    <div className="admin_btn_nav">
+                    <div className="admin_btn_Login_nav">
                         <a href="#admin_section">Admin</a>
                     </div>
                 </div>

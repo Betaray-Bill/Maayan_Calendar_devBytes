@@ -93,6 +93,14 @@ a {
 }
 
 @media(max-width:768px) {
+    /* .sidebar {
+        display: flex;
+        width: 100vw;
+        bottom: 0;
+        margin-bottom: 0px;
+        position: absolute;
+        height: 60px;
+    } */
     .sidebar {
         display: none;
     }

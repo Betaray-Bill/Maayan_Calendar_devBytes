@@ -14,6 +14,7 @@ function Modal() {
     const [open, setopen] = useRecoilState(modalstate)
     const [selectedfile, setselectedfile] = useState(null)
     const [loading, setloading] = useState(false)   
+    const [img, setimg] = useState("")   
 
     const filePicker = useRef(null)
     const eventName = useRef("")
@@ -45,6 +46,7 @@ function Modal() {
             Time:time.current.value,
             Month:dateref.current.value.substring(5, 7),
             Year:dateref.current.value.substring(0,4),
+            image:"",
             timestamps: serverTimestamp()
         })
 
@@ -54,8 +56,10 @@ function Modal() {
             await  updateDoc(doc(db, "events", docRef.id), {
                 image: downloadedUrl
             })
+            setimg(downloadedUrl)
+            console.log("downloadedUrl", downloadedUrl);
         })
-
+        console.log("Image:::", img)
         setopen(false);
         setselectedfile(null);
         setloading(false);

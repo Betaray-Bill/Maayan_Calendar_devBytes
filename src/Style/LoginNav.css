@@ -51,34 +51,26 @@
     padding: 0px 20px;
 }
 
-.about_nav a,
-.admin_btn_nav a {
-    text-decoration: 18px;
+.about_nav a {
     color: white;
     font-size: 18px;
     font-weight: 600;
 }
 
-.admin_btn_nav a {
+.admin_btn_Login_nav a {
     font-size: 18px;
-    font-weight: 600;
     padding: 7px 17px;
-    border: none;
-    background-color: #050c16;
-    border-radius: 3px;
-    color: #f9f9f9;
-    cursor: pointer;
-    /* border: 2px solid #050c16; */
+    border-radius: 4px
 }
 
-.admin_btn_nav a:hover {
+.admin_btn_Login_nav a:hover {
     background-color: #f9f9f9;
     color: #050c16;
-    transition: 250ms all ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 .about_nav {
-    width: 150px;
+    /* width: 150px; */
     display: flex;
     justify-content: space-between;
 }
@@ -105,6 +97,6 @@
         font-size: 14px;
     }
     .admin_btn_nav a {
-        padding: 5px 12px;
+        padding: 5px 7px;
     }
 }

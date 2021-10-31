@@ -1,10 +1,18 @@
 import React from 'react'
 import "../Style/Contact.css"
 import { FaFacebookF , FaTwitter, FaGithub} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
+
 
 function Contact() {
   return (
     <section className = "contact-section">
+    <div className="go_back_cnt">
+          <Link to="/">
+                    <HiOutlineArrowNarrowLeft className="icon go_back_icon"/>
+                </Link>
+        </div>  
       <div className = "contact-bg">
         <h3>Get in Touch with Us</h3>
         <h2>Contact us</h2>

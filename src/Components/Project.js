@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "../Style/Project.css"
 import { useRecoilState } from 'recoil'
+import { userstate } from '../atoms/userAtom'
 import { IoAddOutline } from "react-icons/io5";
 import { modalstate } from '../atoms/modalAtom'
 import { collection, onSnapshot, orderBy, query } from '@firebase/firestore';
@@ -8,10 +9,12 @@ import { db } from '../firebase';
 import ProjectModal from "./ProjectModal";
 import Project_post from "./Project_post";
 import { Link } from "react-router-dom";
+import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 
 function Project() {
-     
+    const [isAdmin, setisAdmin] = useRecoilState(userstate)
     const [open, setopen] = useRecoilState(modalstate)
+
     const [posts, setposts] = useState([]);
     const [loading, setloading] = useState(false)
     const [change_bg, setchange_bg] = useState(false)
@@ -47,7 +50,7 @@ function Project() {
         <div className="project_section" style={{background:`url(${images[0]})`, backgroundRepeat:"no-repeat", backgroundAttachment:"fixed", backgroundSize:"cover"}}>
             <div className="go_back">
                 <Link to="/">
-                    go back
+                    <HiOutlineArrowNarrowLeft className="icon go_back_icon"/>
                 </Link>
             </div>
             <div className="Events_block">
@@ -80,16 +83,22 @@ function Project() {
             </div>
         
 
-            <div className="add_section">
-                <div className="add_bt prj_btn" onClick={() => setopen(true)} >
-                    <IoAddOutline className="icon white"/> 
-                    <button 
-                        className="add"  
-                    >
-                        Add Project
-                    </button>
-                </div>
-            </div>
+            {
+                isAdmin ? (
+                    <div className="add_section">
+                        <div className="add_bt prj_btn" onClick={() => setopen(true)} >
+                            <IoAddOutline className="icon white"/> 
+                            <button 
+                                className="add"  
+                            >
+                                Add Project
+                            </button>
+                        </div>
+                    </div>
+                ):(
+                    " "
+                )
+            }
             <ProjectModal />
         </div>
     )

@@ -4,7 +4,7 @@ import "../Style/Project_post.css"
 function Project_post({id,all_det}) {
     console.log("Prj POst: ", all_det)
   return (
-    <div className="Prj_post" >
+    <div className="Prj_post">
         <div className="prj_img">
             <img src={all_det.image} alt="img" />
         </div>

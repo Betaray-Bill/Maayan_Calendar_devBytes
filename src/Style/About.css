@@ -12,6 +12,11 @@
     scroll-snap-type: y mandatory;
 }
 
+.go_back_abt {
+    background-color: black;
+    padding: 20px;
+}
+
 .lead {
     font-size: 1.2rem;
     color: white;

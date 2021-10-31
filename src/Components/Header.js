@@ -5,10 +5,11 @@ import { selectUser } from '../features/userSlice';
 import { auth } from '../firebase';
 import { signOut } from '@firebase/auth';
 import { IoNotificationsOutline } from "react-icons/io5";
-
+import { useRecoilState } from 'recoil'
+import { userstate } from '../atoms/userAtom'
 
 function Header() {
-
+    const [isAdmin, setisAdmin] = useRecoilState(userstate)
     const user = useSelector(selectUser)
 
     const SignOut= () => {
@@ -22,10 +23,10 @@ function Header() {
             <div className="header_section">   
                 <div className="acc_section">
                     <div className="acc_img">
-                        <img src={user.photo} alt="" />
+                        <img src={isAdmin ? "https://e7.pngegg.com/pngimages/636/819/png-clipart-computer-icons-privacy-policy-admin-icon-copyright-rim.png" : user.photo} alt="" />
                     </div>
                     <div className="acc_welcome">
-                        <p>Welcome {user.name}</p>
+                        <p>Welcome { isAdmin ? "Admin" :user.name}</p>
                     </div>
                 </div>
 
