@@ -17,8 +17,6 @@ function Project() {
 
     const [posts, setposts] = useState([]);
     const [loading, setloading] = useState(false)
-    const [change_bg, setchange_bg] = useState(false)
-
 
     useEffect(() => {
         const unsub = onSnapshot(query(collection(db,"projects"), orderBy("timestamps", "desc")), snapshot => {
@@ -38,16 +36,10 @@ function Project() {
             "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5bbe9769470047.5b82d2e0e68c0.png",
             "https://mir-s3-cdn-cf.behance.net/project_modules/1400/4e802d66616373.5b1c028ba26c3.jpg"
         ]
-    const ChangeBg = () => {
-        const bg = images[Math.floor(Math.random() * images.length)]
-        setchange_bg(bg)
-    }
-
-    setInterval(ChangeBg, 5000)
 
 
     return (
-        <div className="project_section" style={{background:`url(${images[0]})`, backgroundRepeat:"no-repeat", backgroundAttachment:"fixed", backgroundSize:"cover"}}>
+        <div className="project_section" style={{background:`url(${images[1]})`, backgroundRepeat:"no-repeat", backgroundAttachment:"fixed", backgroundSize:"cover"}}>
             <div className="go_back">
                 <Link to="/">
                     <HiOutlineArrowNarrowLeft className="icon go_back_icon"/>

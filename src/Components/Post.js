@@ -3,8 +3,13 @@ import React from 'react'
 import { IoPencil, IoTrashOutline } from "react-icons/io5";
 import { db } from '../firebase';
 import "../Style/Post.css"
+import { useRecoilState } from 'recoil'
+import { userstate } from '../atoms/userAtom'
+
 
 function Post({ all_det , id}) {
+
+    const [isAdmin, setisAdmin] = useRecoilState(userstate)
 
     const del_doc = async() => { 
         console.log("del");
@@ -38,14 +43,18 @@ function Post({ all_det , id}) {
 
             </div>
         </div>
-        <div className="editing">
-            <div className="update">
-                <IoPencil className="icon update_icon"/>
-            </div>
-            <div className="delete">
-                <IoTrashOutline className="icon del_icon" onClick={del_doc}/>
-            </div>
-        </div>
+        {
+            isAdmin ? (
+                <div className="editing">
+                    <div className="update">
+                        <IoPencil className="icon update_icon"/>
+                    </div>
+                    <div className="delete">
+                        <IoTrashOutline className="icon del_icon" onClick={del_doc}/>
+                    </div>
+                </div>
+            ): (" ")
+        }
     </div>
   )
 }
